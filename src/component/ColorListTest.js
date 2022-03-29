@@ -10,5 +10,11 @@ export default function ColorListTest() {
                     const newColors = colors.filter(color => color.id !== id)
                     setColors(newColors);
                 }}
+                onRateColor={(id, rating) => {
+                    const newColors = colors.map(color => 
+                        color.id === id ? { ...color, rating } : color
+                    );
+                    setColors(newColors);
+                }}
             />;
 }
