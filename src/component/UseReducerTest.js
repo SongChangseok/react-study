@@ -1,4 +1,4 @@
-import React, { useReducer, useState, memo } from "react";
+import React, { useReducer, useState, memo, useCallback } from "react";
 
 function Checkbox() {
     // const [checked, setChecked] = useState(false);
@@ -42,15 +42,17 @@ const PureCat = memo(
     Cat,
     (prevProps, nextProps) => prevProps.name === nextProps.name
 );
+const PureCat2 = memo(Cat);
 
 function Test2() {
     const [cats, setCats] = useState([]);
-
+    // const meow = useCallback(name => console.log(`${name} has moewed`), []);
     return (
         <>
             {cats.map((name, i) => (
                 // <Cat key={i} name={name} />
                 <PureCat key={i} name={name} meow={name => console.log(`${name} has moewed`)} />
+                // <PureCat2 key={i} name={name} meow={meow} />
             ))}
             <button onClick={() => setCats([...cats, prompt("Name a cat")])}>
                 Add a cat
