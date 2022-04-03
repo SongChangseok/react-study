@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FetchTest from "./component/FetchTest";
+import RenderPropTest from "./component/RenderPropTest";
 // import MenuTest from './component/MenuTest';
 // import StarTest from './component/StarTest';
 // import ColorListTest from './component/ColorListTest';
@@ -9,7 +10,7 @@ import FetchTest from "./component/FetchTest";
 
 function App() {
   return (
-    <FetchTest/>
+    <RenderPropTest/>
   );
 }
 
