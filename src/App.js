@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import FetchTest from "./component/FetchTest";
+import FetchTest from "./component/FetchTest";
 // import RenderPropTest from "./component/RenderPropTest";
-import VirtualizedListTest from "./component/VirtualizedListTest";
+// import VirtualizedListTest from "./component/VirtualizedListTest";
 // import MenuTest from './component/MenuTest';
 // import StarTest from './component/StarTest';
 // import ColorListTest from './component/ColorListTest';
@@ -11,7 +11,7 @@ import VirtualizedListTest from "./component/VirtualizedListTest";
 
 function App() {
   return (
-    <VirtualizedListTest />
+    <FetchTest />
   );
 }
 
