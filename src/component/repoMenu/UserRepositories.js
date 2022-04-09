@@ -12,6 +12,7 @@ export default function UserRepositories({
             renderSuccess={({ data }) => 
                 <RepoMenu
                     repositories={data}
+                    login={login}
                     onSelect={onSelect}
                 />
             }
