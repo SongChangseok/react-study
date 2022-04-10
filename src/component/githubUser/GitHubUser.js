@@ -76,7 +76,7 @@ function UserDetails({ data }) {
                 {data.name && <p>{data.name}</p>}
                 {data.location && <p>{data.location}</p>}
             </div>
-            <UserRepositories login={data.login} onSelect={repoName => console.log(`${repoName} selected`)} />
+            {/* <UserRepositories login={data.login} onSelect={repoName => console.log(`${repoName} selected`)} /> */}
         </div>
     )
 }

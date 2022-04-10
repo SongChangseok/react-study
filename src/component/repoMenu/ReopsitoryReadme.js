@@ -1,16 +1,16 @@
 import React, { useCallback, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-const loadReadme = async (login, repo) => {
-    const uri = `https://api.github.com/repos/${login}/${repo}/readme`;
-    const { download_url } = await fetch(uri).then(res => 
-        res.json()
-    );
-    const markdown = await fetch(download_url).then(res =>
-        res.text()    
-    );
-    console.log(`Markdown for ${repo}\n\n${markdown}`);
-}
+// const loadReadme = async (login, repo) => {
+//     const uri = `https://api.github.com/repos/${login}/${repo}/readme`;
+//     const { download_url } = await fetch(uri).then(res => 
+//         res.json()
+//     );
+//     const markdown = await fetch(download_url).then(res =>
+//         res.text()    
+//     );
+//     console.log(`Markdown for ${repo}\n\n${markdown}`);
+// }
 
 export default function RepositoryReadme({ repo, login }) {
     const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ export default function RepositoryReadme({ repo, login }) {
 
     useEffect(() => {
         if(!repo || !login) return;
-        loadReadme(login, repo);
+        loadReadme(login, repo).catch(setError);
     }, [repo]);
 
     if(error)

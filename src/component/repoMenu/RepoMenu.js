@@ -4,10 +4,14 @@ import RepositoryReadme from "./ReopsitoryReadme";
 
 export function RepoMenu({
     repositories,
-    login,
+    // login,
+    selected,
     onSelect = f => f
 }) {
-    const [{name}, prev, next] = useIterator(repositories);
+    const [{name}, prev, next] = useIterator(
+        repositories,
+        selected ? repositories.findIndex(repo => repo.name === selected) : null    
+    );
 
     useEffect(() => {
         if(!name) return;
@@ -19,7 +23,7 @@ export function RepoMenu({
             <button onClick={prev}>&lt;</button>
             <p>{name}</p>
             <button onClick={next}>&gt;</button>
-            <RepositoryReadme login={login} repo={name} />
+            {/* <RepositoryReadme login={login} repo={name} /> */}
         </div>
     );
 }
