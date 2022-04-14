@@ -12,7 +12,7 @@ export default function SearchForm({ onSearch = f => f }) {
 
     return (
         <form onSubmit={submit} style={{ display: "flex" }}>
-            <input {...searchFomrProps} type="text" required />
+            <input {...searchFomrProps} type="text" />
             <button>Search</button>
         </form>
     );

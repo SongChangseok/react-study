@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 export const useInput = initialValue => {
     const [value, setValue] = useState(initialValue);
@@ -62,4 +62,13 @@ export const useIterator = (
     const item = useMemo(() => items[i], [i]);
 
     return [item || items[0], prev, next];
+}
+
+export const useMountedRef = () => {
+    const mounted = useRef(false);
+    useEffect(() => {
+        mounted.current = true;
+        return () => (mounted.current = false);
+    });
+    return mounted;
 }
