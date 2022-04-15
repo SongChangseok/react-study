@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FetchTest from "./component/FetchTest";
+// import FetchTest from "./component/FetchTest";
+import GraphQLTest from "./component/GraphQLTest";
 // import RenderPropTest from "./component/RenderPropTest";
 // import VirtualizedListTest from "./component/VirtualizedListTest";
 // import MenuTest from './component/MenuTest';
@@ -11,7 +12,7 @@ import FetchTest from "./component/FetchTest";
 
 function App() {
   return (
-    <FetchTest />
+    <GraphQLTest />
   );
 }
 
