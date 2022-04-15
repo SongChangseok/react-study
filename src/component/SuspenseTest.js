@@ -1,36 +1,12 @@
-import React from "react";
-import Callout from "./suspenseTest/Callout";
-import ErrorBoundary from "./suspenseTest/ErrorBoundary";
-import SiteLayout from "./suspenseTest/SiteLayout";
-
-const BreakThings = () => {
-    throw new Error("Test...");
-}
-
-const Test = () => {
-    return (
-        <SiteLayout 
-            menu={
-                <ErrorBoundary>
-                    <p>Site Layout Menu</p>
-                </ErrorBoundary>
-            }
-        >
-            <>
-            
-                <ErrorBoundary>
-                    <Callout>Callout</Callout>
-                    <BreakThings/>
-                </ErrorBoundary>
-                <h1>Contents</h1>
-                <p>This is the main part of the example layout</p>
-            </>
-        </SiteLayout>
-    )
-}
+import React, { useState } from "react";
+import Agreement from "./suspenseTest/Agreement";
+import Main from "./suspenseTest/Main"
 
 export default function SuspenseTest() {
-    return (
-        <Test/>
-    );
+    const [agree, setAgree] = useState(false);
+
+    if (!agree)
+        return <Agreement onAgree={() => setAgree(true)} />;
+
+    return <Main/>;
 }
