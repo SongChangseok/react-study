@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import GnarTest from "./component/suspenseTest/Gnar";
 // import FetchTest from "./component/FetchTest";
 // import GraphQLTest from "./component/GraphQLTest";
-import SuspenseTest from "./component/SuspenseTest";
+// import SuspenseTest from "./component/SuspenseTest";
+// import StatusTest from "./component/suspenseTest/Status";
 // import RenderPropTest from "./component/RenderPropTest";
 // import VirtualizedListTest from "./component/VirtualizedListTest";
 // import MenuTest from './component/MenuTest';
@@ -13,7 +15,7 @@ import SuspenseTest from "./component/SuspenseTest";
 
 function App() {
   return (
-    <SuspenseTest />
+    <GnarTest />
   );
 }
 
