@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import GnarTest from "./component/suspenseTest/Gnar";
+import React from "react";
+import EslintTest from "./component/eslintTest";
+// import GnarTest from "./component/suspenseTest/Gnar";
 // import FetchTest from "./component/FetchTest";
 // import GraphQLTest from "./component/GraphQLTest";
 // import SuspenseTest from "./component/SuspenseTest";
@@ -15,7 +16,7 @@ import GnarTest from "./component/suspenseTest/Gnar";
 
 function App() {
   return (
-    <GnarTest />
+    <EslintTest />
   );
 }
 
