@@ -14,10 +14,6 @@ import EslintTest from "./component/eslintTest";
 // import UseReducerTest from "./component/UseReducerTest";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
-function App() {
-  return (
-    <EslintTest />
-  );
+export default function App() {
+  return <EslintTest />;
 }
-
-export default App;

@@ -7,16 +7,15 @@ import ErrorBoundary from "./suspenseTest/ErrorBoundary";
 const Main = lazy(() => import("./suspenseTest/Main"));
 
 export default function SuspenseTest() {
-    const [agree, setAgree] = useState(false);
+  const [agree, setAgree] = useState(false);
 
-    if (!agree)
-        return <Agreement onAgree={() => setAgree(true)} />;
+  if (!agree) return <Agreement onAgree={() => setAgree(true)} />;
 
-    return (
-        <ErrorBoundary>
-            <Suspense fallback={<ClimbingBoxLoader/>}>
-                <Main/>
-            </Suspense>
-        </ErrorBoundary>
-    );
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<ClimbingBoxLoader />}>
+        <Main />
+      </Suspense>
+    </ErrorBoundary>
+  );
 }

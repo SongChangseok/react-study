@@ -47,6 +47,8 @@
     "@babel/core": "^7.17.8",
     "babel-loader": "^8.2.4",
     "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "webpack": "^5.70.0",

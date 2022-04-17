@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 // const gnar = "gnarly";
 // const info = ({
@@ -17,16 +17,16 @@ import React, { useState } from "react"
 // }
 
 function gnar() {
-    const [nickname, setNickname] = useState(
-        "dude"
-    );
-    return <h1>gnalry</h1>;
+  const [nickname, setNickname] = useState("dude");
+  return <h1>gnalry</h1>;
 }
 
 function Image() {
-    return <img src="/img.png"/>
+  return <img src="/img.png" />;
 }
 
+console.log("Prettier Test");
+
 export default function EslintTest() {
-    return <></>
+  return <></>;
 }

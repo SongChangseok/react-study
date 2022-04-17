@@ -5,27 +5,23 @@ import RepositoryReadme from "./repoMenu/ReopsitoryReadme";
 import UserRepositories from "./repoMenu/UserRepositories";
 
 export default function FetchTest() {
-    const [login, setLogin] = useState();
-    const [repo, setRepo] = useState();
+  const [login, setLogin] = useState();
+  const [repo, setRepo] = useState();
 
-    const handleSearch = login => {
-        if(login) return setLogin(login);
-        setLogin("");
-        setRepo("");
-    }
+  const handleSearch = (login) => {
+    if (login) return setLogin(login);
+    setLogin("");
+    setRepo("");
+  };
 
-    return (
-        <>
-            <SearchForm onSearch={setLogin} />
-            {login && <GitHubUser login={login} />}
-            {login && <UserRepositories
-                login={login}
-                repo={repo}
-                onSelect={setRepo}
-            />}
-            {login && repo && (
-                <RepositoryReadme login={login} repo={repo} />
-            )}
-        </>
-    );
+  return (
+    <>
+      <SearchForm onSearch={setLogin} />
+      {login && <GitHubUser login={login} />}
+      {login && (
+        <UserRepositories login={login} repo={repo} onSelect={setRepo} />
+      )}
+      {login && repo && <RepositoryReadme login={login} repo={repo} />}
+    </>
+  );
 }

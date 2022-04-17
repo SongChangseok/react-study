@@ -5,12 +5,12 @@ import { ColorProvider } from "./hooks/color-hooks";
 // import { v4 } from "uuid";
 
 export default function ColorListTest() {
-    // const [colors, setColors] = useState(colorData.colors);
-    return (
-        <ColorProvider>
-            <AddColorForm />
-            <ColorList />
-            {/* <AddColorForm
+  // const [colors, setColors] = useState(colorData.colors);
+  return (
+    <ColorProvider>
+      <AddColorForm />
+      <ColorList />
+      {/* <AddColorForm
                 onNewColor={(title, color) => {
                     const newColors = [
                         ...colors,
@@ -37,6 +37,6 @@ export default function ColorListTest() {
                     setColors(newColors);
                 }}
             /> */}
-        </ColorProvider>
-    )
+    </ColorProvider>
+  );
 }
