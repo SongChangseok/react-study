@@ -4,47 +4,40 @@ import { useMountedRef } from "../hooks/customeHooks";
 
 // const loadReadme = async (login, repo) => {
 //     const uri = `https://api.github.com/repos/${login}/${repo}/readme`;
-//     const { download_url } = await fetch(uri).then(res => 
+//     const { download_url } = await fetch(uri).then(res =>
 //         res.json()
 //     );
 //     const markdown = await fetch(download_url).then(res =>
-//         res.text()    
+//         res.text()
 //     );
 //     console.log(`Markdown for ${repo}\n\n${markdown}`);
 // }
 
-
 export default function RepositoryReadme({ repo, login }) {
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState();
-    const [markdown, setMarkdown] = useState("");
-    const mounted = useMountedRef();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
+  const [markdown, setMarkdown] = useState("");
+  const mounted = useMountedRef();
 
-    const loadReadme = useCallback(async (login, repo) => {
-        setLoading(true);
-        const uri = `https://api.github.com/repos/${login}/${repo}/readme`;
-        const { download_url } = await fetch(uri).then(res => 
-            res.json()
-        );
-        const markdown = await fetch(download_url).then(res =>
-            res.text()    
-        );
+  const loadReadme = useCallback(async (login, repo) => {
+    setLoading(true);
+    const uri = `https://api.github.com/repos/${login}/${repo}/readme`;
+    const { download_url } = await fetch(uri).then((res) => res.json());
+    const markdown = await fetch(download_url).then((res) => res.text());
 
-        if(mounted.current) {
-            setMarkdown(markdown);
-            setLoading(false);
-        }
-    }, []);
+    if (mounted.current) {
+      setMarkdown(markdown);
+      setLoading(false);
+    }
+  }, []);
 
-    useEffect(() => {
-        if(!repo || !login) return;
-        loadReadme(login, repo).catch(setError);
-    }, [repo]);
+  useEffect(() => {
+    if (!repo || !login) return;
+    loadReadme(login, repo).catch(setError);
+  }, [repo]);
 
-    if(error)
-        return <pre>{JSON.stringify(error, null, 2)}</pre>;
-    if(loading)
-        return <p>Loading...</p>;
-    
-    return <ReactMarkdown source={markdown} />;
+  if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
+  if (loading) return <p>Loading...</p>;
+
+  return <ReactMarkdown source={markdown} />;
 }

@@ -1,4 +1,5 @@
 import { GraphQLClient } from "graphql-request";
+import React from "react";
 
 const query = `
     query findRepos($login:String!) {
