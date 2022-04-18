@@ -1,6 +1,7 @@
 import React from "react";
 // import EslintTest from "./component/eslintTest";
-import PropTypesTest from "./component/PropTypesTest";
+// import PropTypesTest from "./component/PropTypesTest";
+import Star from "./component/star/Star";
 // import GnarTest from "./component/suspenseTest/Gnar";
 // import FetchTest from "./component/FetchTest";
 // import GraphQLTest from "./component/GraphQLTest";
@@ -16,5 +17,5 @@ import PropTypesTest from "./component/PropTypesTest";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
 export default function App() {
-  return <PropTypesTest />;
+  return <Star />;
 }
