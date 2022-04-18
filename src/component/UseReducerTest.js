@@ -1,6 +1,6 @@
-import React, { useReducer, useState, memo, useCallback } from "react";
+import React, { useReducer, useState, memo } from "react";
 
-function Checkbox() {
+export function Checkbox() {
   // const [checked, setChecked] = useState(false);
 
   // function toggle() {
@@ -28,9 +28,9 @@ function Checkbox() {
   );
 }
 
-function Test() {
-  return <Checkbox />;
-}
+// function Test() {
+//   return <Checkbox />;
+// }
 
 const Cat = ({ name, meow = (f) => f }) => {
   console.log(`rendering ${name}`, new Date());
@@ -43,7 +43,7 @@ const PureCat = memo(
   Cat,
   (prevProps, nextProps) => prevProps.name === nextProps.name
 );
-const PureCat2 = memo(Cat);
+// const PureCat2 = memo(Cat);
 
 function Test2() {
   const [cats, setCats] = useState([]);
@@ -66,6 +66,6 @@ function Test2() {
   );
 }
 
-export default function UseReducerTest() {
+export function UseReducerTest() {
   return <Test2 />;
 }
