@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // const gnar = "gnarly";
 // const info = ({
@@ -16,14 +16,14 @@ import React, { useState } from "react";
 //         break;
 // }
 
-function gnar() {
-  const [nickname, setNickname] = useState("dude");
-  return <h1>gnalry</h1>;
-}
+// function gnar() {
+//   const [nickname, setNickname] = useState("dude");
+//   return <h1>gnalry</h1>;
+// }
 
-function Image() {
-  return <img src="/img.png" />;
-}
+// function Image() {
+//   return <img src="/img.png" />;
+// }
 
 console.log("Prettier Test");
 
