@@ -3,22 +3,22 @@ div.page {
   justify-content: space-between;
   height: 100%;
 }
-section > div:not(.about-menu, .whoops-404),
-section > section {
+div > div:not(.about-menu, .whoops-404),
+div > div {
   margin: 1em;
 }
-section.events,
-section.products,
-section.contact {
+div.events,
+div.products,
+div.contact {
   flex-grow: 1;
   margin: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section.events h1,
-section.products h1,
-section.contact h1 {
+div.events h1,
+div.products h1,
+div.contact h1 {
   font-size: 3em;
   color: slategray;
 }
@@ -48,7 +48,7 @@ div.home > nav a {
   color: ghostwhite;
   flex-basis: 200px;
 }
-section.about > section {
+div.about > div {
   padding: 2em;
 }
 div.whoops-404 {
