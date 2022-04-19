@@ -1,5 +1,6 @@
 import React from "react";
-import RouterTest from "./component/RouterTest";
+// import RouterTest from "./component/RouterTest";
+import ReouterTest2 from "./component/RouterTest2";
 // import EslintTest from "./component/eslintTest";
 // import PropTypesTest from "./component/PropTypesTest";
 // import Star from "./component/star/Star";
@@ -18,5 +19,5 @@ import RouterTest from "./component/RouterTest";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
 export default function App() {
-  return <RouterTest />;
+  return <ReouterTest2 />;
 }
