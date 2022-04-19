@@ -1,6 +1,6 @@
 import React, { useReducer, useState, memo } from "react";
 
-export function Checkbox() {
+function Checkbox() {
   // const [checked, setChecked] = useState(false);
 
   // function toggle() {
