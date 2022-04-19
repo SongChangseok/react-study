@@ -1,7 +1,8 @@
 import React from "react";
+import RouterTest from "./component/RouterTest";
 // import EslintTest from "./component/eslintTest";
 // import PropTypesTest from "./component/PropTypesTest";
-import Star from "./component/star/Star";
+// import Star from "./component/star/Star";
 // import GnarTest from "./component/suspenseTest/Gnar";
 // import FetchTest from "./component/FetchTest";
 // import GraphQLTest from "./component/GraphQLTest";
@@ -17,5 +18,5 @@ import Star from "./component/star/Star";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
 export default function App() {
-  return <Star />;
+  return <RouterTest />;
 }
