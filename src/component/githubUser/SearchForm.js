@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useInput } from "../hooks/customeHooks";
 
 export default function SearchForm({ onSearch = (f) => f }) {

@@ -1,6 +1,8 @@
 import React from "react";
+import FetchTest from "./component/FetchTest";
+// import GitHubUser from "./component/githubUser/GitHubUser";
 // import RouterTest from "./component/RouterTest";
-import ReouterTest2 from "./component/RouterTest2";
+// import ReouterTest2 from "./component/RouterTest2";
 // import EslintTest from "./component/eslintTest";
 // import PropTypesTest from "./component/PropTypesTest";
 // import Star from "./component/star/Star";
@@ -19,5 +21,5 @@ import ReouterTest2 from "./component/RouterTest2";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
 export default function App() {
-  return <ReouterTest2 />;
+  return <FetchTest />;
 }

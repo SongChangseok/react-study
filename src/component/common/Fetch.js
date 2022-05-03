@@ -37,6 +37,7 @@ export function Fetch({
   loadingFallback = <p>loading...</p>,
   renderError = (error) => <pre>{JSON.stringify(error, null, 2)}</pre>
 }) {
+  console.log(uri);
   const { loading, data, error } = useFetch(uri);
   if (loading) return loadingFallback;
   if (error) return renderError(error);

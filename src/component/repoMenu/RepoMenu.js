@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useIterator } from "../hooks/customeHooks";
-import RepositoryReadme from "./ReopsitoryReadme";
 
 export function RepoMenu({
   repositories,

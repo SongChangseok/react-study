@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Fetch } from "../common/Fetch";
-import { loadJSON, saveJSON } from "../common/Storage";
-import UserRepositories from "../repoMenu/UserRepositories";
+// import { loadJSON, saveJSON } from "../common/Storage";
+// import UserRepositories from "../repoMenu/UserRepositories";
 
 // export default function GitHubUser({ login }) {
 //     const key = `user:${login}`;
