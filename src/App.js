@@ -1,5 +1,6 @@
 import React from "react";
-import FetchTest from "./component/FetchTest";
+import AwaitThenTest from "./AwaitThenTest";
+// import FetchTest from "./component/FetchTest";
 // import GitHubUser from "./component/githubUser/GitHubUser";
 // import RouterTest from "./component/RouterTest";
 // import ReouterTest2 from "./component/RouterTest2";
@@ -21,5 +22,5 @@ import FetchTest from "./component/FetchTest";
 // import AddColorFormTest from "./component/AddColorFormTest";
 
 export default function App() {
-  return <FetchTest />;
+  return <AwaitThenTest />;
 }
